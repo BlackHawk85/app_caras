@@ -1,4 +1,4 @@
-name: face_model
+name: face_model 
 
 on:
   push:
