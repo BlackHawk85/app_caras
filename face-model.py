@@ -17,7 +17,7 @@ import pathlib
 # Set the path of the input folder
 
 dataset = "https://drive.google.com/file/d/1hMsglKoS1oU18zNagzyywQcaVkpW-Ehf/view?usp=drive_link"
-directory = tf.keras.utils.get_file('face_photos', origin=dataset, untar=True)
+directory = tf.keras.utils.get_file('caras', origin=dataset, untar=True)
 data = pathlib.Path(directory)
 folders = os.listdir(data)
 #print(folders)
