@@ -19,9 +19,9 @@ jobs:
     - name: install additional modules 
       run: pip install -r requirements.txt
     - name: execute model
-      run: python flowers-model.py
+      run: python face-model.py
     - name: show dir
-      run: ls -la flowers-model
+      run: ls -la face-model
 
     - name: docker login
       env:
@@ -41,4 +41,4 @@ jobs:
       run: docker commit --change "ENV MODEL_NAME ${{secrets.MODEL_NAME}}" serving_base ${{secrets.DOCKER_USER}}/tensorflow-${{secrets.MODEL_NAME}}:${{ github.sha }}
   
     - name: Docker Push 
-      run: docker push ${{secrets.DOCKER_USER}}/tensorflow-${{secrets.MODEL_NAME}}:${{ github.sha }}  
+      run: docker push ${{secrets.DOCKER_USER}}/tensorflow-${{secrets.MODEL_NAME}}:${{ github.sha }}
