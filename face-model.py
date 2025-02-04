@@ -16,7 +16,7 @@ import pathlib
 
 # Set the path of the input folder
 
-dataset = "https://drive.google.com/file/d/1hMsglKoS1oU18zNagzyywQcaVkpW-Ehf/view?usp=sharing/caras.zip"
+dataset = "https://drive.google.com/uc?export=download&id=1IXx1TynW-WmUlNNbJEvnExXDrmDvQlT3"
 directory = tf.keras.utils.get_file('caras', origin=dataset, untar=True)
 data = pathlib.Path(directory)
 folders = os.listdir(data)
