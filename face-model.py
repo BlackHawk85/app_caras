@@ -2,6 +2,7 @@
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
 
 # Helper libraries
 # import matplotlib.pyplot as plt
@@ -71,11 +72,20 @@ labels = np.array(labels)
 
 
 # Develop a sequential model using tensorflow keras
-model = keras.Sequential([
-    keras.layers.Flatten(input_shape=(64,64,3)),
-    keras.layers.Dense(128, activation=tf.nn.tanh),
-    keras.layers.Dense(10, activation=tf.nn.softmax)
-])
+#model = keras.Sequential([
+    #keras.layers.Flatten(input_shape=(64,64,3)),
+    #keras.layers.Dense(128, activation=tf.nn.tanh),
+    #keras.layers.Dense(10, activation=tf.nn.softmax)
+#])
+
+model = Sequential()
+model.add(Conv2D(32, (3, 3), activation='relu', input_shape=(150, 150, 1)))
+model.add(MaxPooling2D((2, 2)))
+model.add(Conv2D(64, (3, 3), activation='relu'))
+model.add(MaxPooling2D((2, 2)))
+model.add(Flatten())
+model.add(Dense(64, activation='relu'))
+model.add(Dense(len(train_labels), activation='softmax'))
 
 # Compute the model parameters
 
