@@ -34,6 +34,7 @@ for personName in listPersons:
     for fileName in os.listdir(rostrosPath):
         img_path = os.path.join(rostrosPath, fileName)
         img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
+        img = cv2.resize(img, (150, 150))
         images.append(img)
         labels.append(personName)
 
