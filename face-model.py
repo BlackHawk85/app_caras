@@ -1,23 +1,12 @@
-# TensorFlow and tf.keras
-import tensorflow as tf
-from tensorflow import keras
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
-from tensorflow.keras import Sequential
+import os
+import cv2
+import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
+from tensorflow.keras import Sequential
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
+import tensorflow as tf
 import base64
-
-# Helper libraries
-# import matplotlib.pyplot as plt
-import numpy as np
-from os import listdir
-from os.path import join
-import cv2
-import pandas
-import os
-import random
-import pathlib
 
 # Set the path of the input folder
 
