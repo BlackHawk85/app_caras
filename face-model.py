@@ -41,11 +41,13 @@ print(listPersons)
 
 for personName in listPersons:
     rostrosPath = os.path.join(data, personName)
-    for fileName in os.listdir(data):
-        img_path = os.path.join(data, fileName)
+    for fileName in os.listdir(rostrosPath):
+        img_path = os.path.join(rostrosPath, fileName)
         img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
         images.append(img)
         labels.append(personName)
+
+
 
 # Transform the image array to a numpy type
 
