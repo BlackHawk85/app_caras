@@ -7,6 +7,7 @@ from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
 import cv2
 import os
 import base64
+import pathlib
 
 # Set the path of the input folder
 
