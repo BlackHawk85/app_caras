@@ -1,6 +1,6 @@
 name: face_model  
 
-on: 
+on:  
   push: 
     branches: [ main ]  
   pull_request:   
