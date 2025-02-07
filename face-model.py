@@ -24,15 +24,15 @@ import pathlib
 dataset = "https://drive.google.com/uc?export=download&id=1IXx1TynW-WmUlNNbJEvnExXDrmDvQlT3"
 directory = tf.keras.utils.get_file('caras', origin=dataset, untar=True)
 data = pathlib.Path(directory)
-listPersons = os.listdir(data)
+
 #print(folders)
 
 # Import the images and resize them to a 128*128 size
 # Also generate the corresponding labels
 
-image_names = []
 labels = []
 images = []
+listPersons = ['Mark Ruffalo', 'Scarlett Johansson', 'Chris Evans', 'Chris Hemsworth', 'Robert Downey Jr']
 
 size = 64,64
 print('folders')
