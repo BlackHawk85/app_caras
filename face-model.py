@@ -1,11 +1,11 @@
-import os
-import cv2
+import tensorflow as tf
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from tensorflow.keras import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
-import tensorflow as tf
+import cv2
+import os
 import base64
 
 # Set the path of the input folder
